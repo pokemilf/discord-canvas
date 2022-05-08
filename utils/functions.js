@@ -27,6 +27,17 @@ module.exports = {
             ctx.font = `${(defaultFontSize -= 1)}px ${font}`;
         } while (ctx.measureText(text).width > width);
         return ctx.font;
+    },
+
+    /**
+     * Create random color
+     * @returns {string} The randomized color
+     */
+    randomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
     }
 
 };
